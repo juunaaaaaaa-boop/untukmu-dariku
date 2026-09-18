@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>sebuah pesan kecil</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="blur blur-1"></div>
+    <div class="blur blur-2"></div>
+    <div class="stars"></div>
+  </div>
+
+  <!-- opening -->
+  <section class="page active" id="opening">
+
+    <div class="opening-box">
+
+      <p class="mini">ada sesuatu yang mau aku sampaikan...</p>
+
+      <h1>
+        mungkin ini<br>
+        sedikit random.
+      </h1>
+
+      <p class="description">
+        tapi sebelum kamu pergi, coba luangin sedikit waktu
+        buat baca sampai selesai.
+      </p>
+
+      <button class="main-btn" onclick="openLetter()">
+        buka pesannya
+        <span>→</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- surat -->
+  <section class="page" id="letter">
+
+    <div class="letter-card">
+
+      <div class="envelope-icon">✉</div>
+
+      <p class="mini">buat kamu yang mungkin nggak sadar</p>
+
+      <h2>
+        aku sebenarnya<br>
+        udah lama mau ngomong.
+      </h2>
+
+      <p>
+        bukan karena aku nggak punya keberanian,
+        cuma kadang ada beberapa hal yang lebih gampang
+        ditulis daripada diucapkan langsung.
+      </p>
+
+      <p>
+        jadi daripada nanti malah salah ngomong,
+        aku pilih cara yang sedikit aneh ini.
+      </p>
+
+      <button class="main-btn" onclick="nextPage('story')">
+        lanjut baca
+        <span>→</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- story -->
+  <section class="page" id="story">
+
+    <div class="content">
+
+      <p class="mini">sebenarnya...</p>
+
+      <h2>
+        aku nggak tahu<br>
+        mulai dari mana.
+      </h2>
+
+      <div class="text-block">
+
+        <p>
+          awalnya mungkin cuma biasa aja.
+          ngobrol, ketawa, saling ngeledek,
+          atau sekadar lihat kamu lewat.
+        </p>
+
+        <p>
+          tapi entah sejak kapan,
+          hal-hal kecil tentang kamu mulai
+          gampang banget masuk ke pikiran aku.
+        </p>
+
+        <p>
+          kadang cuma percakapan singkat,
+          tapi bisa kepikiran lebih lama
+          daripada yang seharusnya.
+        </p>
+
+        <p>
+          dan semakin lama aku sadar,
+          mungkin ini bukan sekadar rasa penasaran.
+        </p>
+
+      </div>
+
+      <button class="main-btn" onclick="nextPage('reason')">
+        terus?
+        <span>→</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- reason -->
+  <section class="page" id="reason">
+
+    <div class="content">
+
+      <p class="mini">kenapa kamu?</p>
+
+      <h2>
+        nggak ada jawaban<br>
+        yang terlalu rumit.
+      </h2>
+
+      <div class="reason-grid">
+
+        <div class="reason-card">
+          <div>01</div>
+          <h3>nyaman</h3>
+          <p>
+            ada rasa nyaman yang susah dijelaskan
+            setiap kali ngobrol sama kamu.
+          </p>
+        </div>
+
+        <div class="reason-card">
+          <div>02</div>
+          <h3>berbeda</h3>
+          <p>
+            kamu punya cara sendiri dalam membuat
+            hal sederhana terasa lebih menarik.
+          </p>
+        </div>
+
+        <div class="reason-card">
+          <div>03</div>
+          <h3>selalu kepikiran</h3>
+          <p>
+            sesibuk apa pun, entah kenapa kamu
+            tetap bisa muncul di kepala.
+          </p>
+        </div>
+
+        <div class="reason-card">
+          <div>04</div>
+          <h3>ya... kamu</h3>
+          <p>
+            pada akhirnya aku nggak bisa menemukan
+            alasan lain selain karena orangnya memang kamu.
+          </p>
+        </div>
+
+      </div>
+
+      <button class="main-btn" onclick="nextPage('confess')">
+        satu hal lagi
+        <span>→</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- confess -->
+  <section class="page" id="confess">
+
+    <div class="confess-box">
+
+      <p class="mini">oke, ini bagian sebenarnya.</p>
+
+      <h1>
+        aku suka sama kamu.
+      </h1>
+
+      <p class="big-text">
+        sesederhana itu.
+      </p>
+
+      <p class="description">
+        aku nggak bikin website ini supaya kamu merasa
+        harus menjawab sesuatu yang besar.
+        aku cuma ingin kamu tahu apa yang selama ini
+        ada di kepala aku.
+      </p>
+
+      <p class="description">
+        kalau ternyata perasaan kamu nggak sama,
+        nggak apa-apa.
+        aku tetap menghargai kamu dan keputusan kamu.
+      </p>
+
+      <div class="choice">
+
+        <button class="yes-btn" onclick="answerYes()">
+          aku mau tahu lebih lanjut
+        </button>
+
+        <button class="no-btn" onclick="answerNo()">
+          aku belum siap
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- yes -->
+  <section class="page" id="yes">
+
+    <div class="result-box">
+
+      <div class="heart">♡</div>
+
+      <p class="mini">oke...</p>
+
+      <h2>
+        berarti kita ngobrol
+        lebih lanjut.
+      </h2>
+
+      <p>
+        nggak perlu langsung menentukan apa pun.
+        ngobrol aja dulu seperti biasanya.
+        siapa tahu dari percakapan sederhana,
+        kita bisa tahu sebenarnya mau dibawa ke mana.
+      </p>
+
+      <a
+        class="whatsapp-btn"
+        href="https://wa.me/6283189175323?text=hai%2C%20aku%20udah%20baca%20pesannya%20sampai%20selesai%20%F0%9F%98%AD"
+        target="_blank"
+      >
+        chat aku di whatsapp
+        <span>↗</span>
+      </a>
+
+      <button class="back-btn" onclick="restart()">
+        baca lagi
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- no -->
+  <section class="page" id="no">
+
+    <div class="result-box">
+
+      <div class="small-heart">♡</div>
+
+      <p class="mini">nggak apa-apa.</p>
+
+      <h2>
+        serius, kamu nggak perlu
+        merasa nggak enak.
+      </h2>
+
+      <p>
+        aku lebih memilih kamu jujur daripada
+        menjawab sesuatu hanya karena merasa
+        nggak enak sama aku.
+      </p>
+
+      <p>
+        setidaknya sekarang aku sudah menyampaikan
+        apa yang ingin aku sampaikan.
+        sisanya, biar berjalan sewajarnya.
+      </p>
+
+      <button class="main-btn" onclick="restart()">
+        mulai dari awal
+        <span>↻</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    <p>dibuat dengan sedikit keberanian.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
